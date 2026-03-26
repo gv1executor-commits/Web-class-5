@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Web SDN</title>
+
+<style>
+body {
+    font-family: Arial;
+}
+
+/* tombol garis 3 */
+.menu-btn {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* menu */
+.menu {
+    display: none;
+    background: #ddd;
+    padding: 10px;
+}
+
+/* halaman */
+.halaman {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+</style>
+
+</head>
+<body>
+
+<!-- tombol garis 3 -->
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+<!-- menu isi -->
+<div id="menu" class="menu">
+    <p onclick="showPage('home')">Home</p>
+    <p onclick="showPage('developer')">Developer</p>
+</div>
+
+<!-- HALAMAN HOME -->
+<div id="home" class="halaman active">
+    <h1>Web sdn 4 madurejo</h1>
+    <h1>Halo selamat datang</h1>
+    <p>perkenalkan ini adalah web buatan 
+aaf dari sdn 4 madurejo pangkalan bun</p>
+
+    <p>nama pelajar kelas 5: <p>
+       
+<ul>
+    <li>aaf</li>
+    <li>ardi</li>
+    <li>billy</li>
+    <li>guntur</li>
+    <li>aqila</li>
+    <li>keysa</li>
+    <li>reza</li>
+    <li>raju</li>
+    <li>rama</li>
+    <li>raudatul</li>
+    <li>zahra</li>
+    <li>mikha</li>
+    <li>rasyid</li>
+    <li>yola</li>
+    <li>rika</li>
+    <li>elvira</li>
+    <li>hani</li>
+    <li>al</li>
+    <li>nur</li>
+    <li>ari fatus</li>
+    <li>dian</li>
+    <li>zayn</li>
+</ul>
+
+    <p>kami kelas 5 belajar dengan guru bernama faisal<p>
+    <p>di sdn 4 madurejo terdapat guru yaitu:  <p>
+    
+</ul>
+    <li>bu sudarsi[kepala sekolah]</li>
+    <li>pak faisal</li>
+    <li>bu septi</li>
+    <li>bu marsauli</li>
+    <li>pak nurul</li>
+    <li>bu rupah</li>
+    <li>bu imelda</li>
+    <li>bu fitri</li>
+</ul>
+
+<div id="halaman1">
+    <h1>halaman utama</h1>
+    <p>Ini halaman utama</p>
+
+    <button onclick="pindah('halaman2')">lihat foto kelas lima</button>
+</div>
+
+<div id="halaman2" style="display:none;">
+    <h1>foto</h1>
+    <p>foto kelas lima</p>
+    
+    <img src="https://files.catbox.moe/vol471.jpg" width="200">
+    <img src="https://files.catbox.moe/8ycb6c.jpg" width="200">
+    <img src="https://files.catbox.moe/hjryxr.jpg" width="200">
+    
+
+    <button onclick="pindah('halaman1')">Tutup</button>
+          </div>
+     </div>
+
+<script>
+function pindah(id) {
+    document.getElementById("halaman1").style.display = "none";
+    document.getElementById("halaman2").style.display = "none";
+    document.getElementById(id).style.display = "block";
+}
+</script>
+
+<div id="developer" class="halaman">
+    <h1>Developer</h1>
+    <p>developer: aaf</p>
+    <p>ide gambar: billy</p>
+</div>
+
+<script>
+function toggleMenu() {
+    var m = document.getElementById("menu");
+    if (m.style.display === "block") {
+        m.style.display = "none";
+    } else {
+        m.style.display = "block";
+    }
+}
+
+function showPage(pageId) {
+    var pages = document.getElementsByClassName("halaman");
+
+    for (var i = 0; i < pages.length; i++) {
+        pages[i].style.display = "none";
+    }
+
+    document.getElementById(pageId).style.display = "block";
+}
+</script>
+
+</body>
+</html>
